@@ -1,0 +1,20 @@
+body{
+background:#f5f7fa;
+font-family:Arial, sans-serif;
+}
+
+.card{
+border-radius:10px;
+}
+
+.navbar{
+font-size:20px;
+}
+
+table{
+text-align:center;
+}
+
+#report{
+font-size:18px;
+}
