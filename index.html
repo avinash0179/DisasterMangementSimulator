@@ -1,108 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Disaster Response Simulator</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<nav class="navbar navbar-dark bg-danger">
-<div class="container-fluid">
-<span class="navbar-brand mb-0 h1">🚨 Disaster Response Simulator</span>
-</div>
-</nav>
+<header>
+<h1>🚨 Disaster Response Simulator</h1>
+</header>
 
-<div class="container mt-4">
+<div class="dashboard">
 
-<div class="row g-4">
+<div class="card">
 
-<!-- Disaster Selection -->
-<div class="col-md-4">
-<div class="card shadow">
-<div class="card-body">
-<h5 class="card-title">Select Disaster</h5>
+<h3>Disaster Control</h3>
 
-<select id="disasterType" class="form-select mb-3">
-<option value="Fire">🔥 Fire</option>
-<option value="Flood">🌊 Flood</option>
-<option value="Earthquake">🌍 Earthquake</option>
-<option value="Accident">🚑 Accident</option>
+<select id="disasterType">
+<option>Fire</option>
+<option>Flood</option>
+<option>Earthquake</option>
+<option>Accident</option>
 </select>
 
-<button class="btn btn-danger w-100" onclick="startSimulation()">
-Start Simulation
-</button>
+<button onclick="startSimulation()">Start Simulation</button>
 
 </div>
-</div>
-</div>
 
-<!-- Rescue Teams -->
-<div class="col-md-4">
-<div class="card shadow">
-<div class="card-body">
-<h5 class="card-title">Rescue Teams</h5>
+<div class="card">
 
-<p>Available Teams</p>
+<h3>Rescue Operation</h3>
 
-<ul class="list-group mb-3">
-<li class="list-group-item">Medical Team</li>
-<li class="list-group-item">Fire Rescue Team</li>
-<li class="list-group-item">Emergency Response Team</li>
-</ul>
+<button onclick="assignTeam()">Assign Rescue Team</button>
 
-<button class="btn btn-primary w-100" onclick="assignTeam()">
-Assign Rescue Team
-</button>
+<button onclick="generateReport()">Generate Report</button>
 
-</div>
-</div>
-</div>
+<p id="report"></p>
 
-<!-- Report -->
-<div class="col-md-4">
-<div class="card shadow">
-<div class="card-body">
-
-<h5 class="card-title">Simulation Report</h5>
-
-<button class="btn btn-success w-100 mb-3" onclick="generateReport()">
-Generate Report
-</button>
-
-<p id="report" class="text-success fw-bold"></p>
-
-</div>
-</div>
 </div>
 
 </div>
 
-<!-- Victim Table -->
-<div class="row mt-4">
 
-<div class="col-12">
-<div class="card shadow">
+<div class="tableCard">
 
-<div class="card-body">
+<h2>Victim Monitoring</h2>
 
-<h4 class="card-title">Victim Monitoring</h4>
+<table id="victimTable">
 
-<div class="table-responsive">
-
-<table class="table table-striped" id="victimTable">
-
-<thead class="table-dark">
+<thead>
 <tr>
 <th>ID</th>
-<th>Health Status</th>
+<th>Health</th>
 <th>Priority</th>
 <th>Status</th>
 </tr>
@@ -113,13 +68,7 @@ Generate Report
 </table>
 
 </div>
-</div>
-</div>
-</div>
 
-</div>
-
-</div>
 
 <script src="script.js"></script>
 

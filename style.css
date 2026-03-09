@@ -1,20 +1,99 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
 body{
-background:#f5f7fa;
-font-family:Arial, sans-serif;
+background:#f4f6f9;
+}
+
+header{
+background:#1e293b;
+color:white;
+padding:20px;
+text-align:center;
+font-size:22px;
+}
+
+.dashboard{
+display:flex;
+gap:20px;
+padding:20px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .card{
-border-radius:10px;
-}
-
-.navbar{
-font-size:20px;
-}
-
-table{
+background:white;
+padding:25px;
+width:280px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
 text-align:center;
 }
 
+.card h3{
+margin-bottom:15px;
+color:#333;
+}
+
+select{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:8px;
+background:#2563eb;
+color:white;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.tableCard{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+
+th{
+background:#1e293b;
+color:white;
+padding:12px;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+background:#f1f5f9;
+}
+
 #report{
-font-size:18px;
+margin-top:10px;
+font-weight:bold;
+color:#16a34a;
 }
