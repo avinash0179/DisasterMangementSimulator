@@ -1,76 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Disaster Response Simulator</title>
+<title>Login - Disaster Simulator</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet'
+href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="login.css">
 
 </head>
 
 <body>
 
-<header>
-<h1>🚨 Disaster Response Simulator</h1>
-</header>
+<div class="container" id="container">
 
-<div class="dashboard">
+<!-- SIGN UP -->
 
-<div class="card">
+<div class="form-container sign-up-container">
 
-<h3>Disaster Control</h3>
+<form>
 
-<select id="disasterType">
-<option>Fire</option>
-<option>Flood</option>
-<option>Earthquake</option>
-<option>Accident</option>
-</select>
+<h1>Create Account</h1>
 
-<button onclick="startSimulation()">Start Simulation</button>
+<span>Use email for registration</span>
 
-</div>
+<input type="text" id="signupName" placeholder="Name"/>
+<input type="email" id="signupEmail" placeholder="Email"/>
+<input type="password" id="signupPassword" placeholder="Password"/>
 
-<div class="card">
+<button type="button" onclick="signup()">Sign Up</button>
 
-<h3>Rescue Operation</h3>
-
-<button onclick="assignTeam()">Assign Rescue Team</button>
-
-<button onclick="generateReport()">Generate Report</button>
-
-<p id="report"></p>
+</form>
 
 </div>
 
+<!-- SIGN IN -->
+
+<div class="form-container sign-in-container">
+
+<form>
+
+<h1>Sign In</h1>
+
+<span>Use your account</span>
+
+<input type="email" id="email" placeholder="Email"/>
+<input type="password" id="password" placeholder="Password"/>
+
+<p id="loginError" class="error"></p>
+
+<button type="button" id="loginBtn" onclick="login()">
+<span id="btnText">Sign In</span>
+<span id="btnDots" class="dots" style="display:none;">
+<span>.</span><span>.</span><span>.</span>
+</span>
+</button>
+
+<div id="loader" class="loader" style="display:none;"></div>
+
+</form>
+
 </div>
 
+<!-- OVERLAY -->
 
-<div class="tableCard">
+<div class="overlay-container">
 
-<h2>Victim Monitoring</h2>
+<div class="overlay">
 
-<table id="victimTable">
+<div class="overlay-panel overlay-left">
 
-<thead>
-<tr>
-<th>ID</th>
-<th>Health</th>
-<th>Priority</th>
-<th>Status</th>
-</tr>
-</thead>
+<h1>Welcome Back!</h1>
 
-<tbody></tbody>
+<p>Login with your account</p>
 
-</table>
+<button class="ghost" id="signIn">Sign In</button>
 
 </div>
 
+<div class="overlay-panel overlay-right">
 
-<script src="script.js"></script>
+<h1>Hello, User!</h1>
+
+<p>Enter details to start using the simulator</p>
+
+<button class="ghost" id="signUp">Sign Up</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="login.js"></script>
 
 </body>
 </html>
